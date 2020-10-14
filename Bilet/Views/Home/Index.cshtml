@@ -1,0 +1,59 @@
+﻿@model Bilet.Model.TblBilet
+
+@{
+    ViewData["Title"] = "Ankara Büyükşehir Belediyesi Bilet Alım Anasayfası";
+}
+
+<div style="height: 30vh">
+
+</div>
+
+<div class="container-fluid">
+    <div class="col-sm-4">
+        <form asp-action="Index" method="post" class="wbform">
+            <h4>Bilet Alım</h4>
+            <div class="form-group">
+                <label>İsim</label>
+
+                @Html.TextBoxFor(model => model.Ad, new { @class = "form-control", PlaceHolder = "İsminizi Yazın", Required = "" })
+            </div>
+            <div class="form-group">
+                <label>Soyisim</label>
+                @Html.TextBoxFor(model => model.Soyisim, new { @class = "form-control", PlaceHolder = "Soyisminizi Yazın", Required = "" })
+            </div>
+
+            <div class="form-group">
+                <label>Aktivite</label>
+
+                <select id=" select1" asp-for="Aktivite">
+                    <option selected disabled>---Lütfen Bir Aktivite Seçiniz---</option>
+                    <option>Ankaragücü-Gençlerbirliği 24.08.2020 Saat:17.00</option>
+                    <option>Hüseyin Kağıt Konseri 14.10.2020 Saat:21.00</option>
+                    <option>Türk Telekom-Galatasaray 22.10.2020 Saat:17.30</option>
+                    <option>Ankaragücü-Fenerbahçe 04.11.2020 Saat:20.00</option>
+
+                </select>
+
+            </div>
+
+            <div class="form-group">
+                <label>Bilet sayısı</label>
+
+                <select id=" select1" asp-for="BiletSayisi">
+                    <option selected disabled>0</option>
+                    <option>1</option>
+                    <option>2</option>
+                    
+
+                </select>
+
+            </div>
+
+
+            <div class="row justify-content-end">
+                <button class="btn btn-outline-primary mr-2">SATIN AL</button>
+            </div>
+
+        </form>
+    </div>
+</div>

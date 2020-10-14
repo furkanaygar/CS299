@@ -1,0 +1,48 @@
+﻿@model Bilet.Model.TblBilet
+
+@{
+    ViewData["Title"] = "Biletim";
+}
+
+@{
+    int myValue = Model.BiletSayisi;
+
+
+    @if (@myValue == 1)
+    {
+
+
+        <div class="ticket">
+            <h50>ABB Bilet</h50>
+            <div data-number="166">@Model.Ad<br />@Model.Soyisim<br />@Model.Aktivite </div>
+        </div>
+    }
+
+    @if (@myValue == 2)
+    {
+
+
+        <div class="ticket">
+            <h50>ABB Bilet</h50>
+            <div data-number="166">@Model.Ad<br />@Model.Soyisim<br />@Model.Aktivite </div>
+        </div>
+
+        <div class="ticket">
+            <h50>ABB Bilet</h50>
+            <div data-number="167">@Model.Ad<br />@Model.Soyisim<br />@Model.Aktivite </div>
+        </div>
+
+    }
+
+  
+        <d1 class ="row-sm -5">
+            <dt class ="col-sm-101">
+                @Html.ActionLink("Bilet Alım Sayfasına Geri Dön", "Index");
+
+            </dt>
+
+        </d1>
+
+       
+  
+}
